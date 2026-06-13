@@ -291,34 +291,34 @@
 
 
 
-// #include <iostream>
-// #include <thread>
-// using namespace std;
+#include<iostream>
+#include<thread>
+using namespace std;
 
-// // Define a function object (functor)
-// class SumFunctor {
-// public:
-//     int n;
-//     SumFunctor(int a) : n(a) {}
+// Define a function object (functor)
+class SumFunctor {
+public:
+    int n;
+    SumFunctor(int a) : n(a) {}
 
-//     // Overload the operator() to 
-//     // make it callable
-//     void operator()() const {
-//         cout << n;
-//     }
-// };
+    // Overload the operator() to 
+    // make it callable
+    void operator()() const {
+        cout << n;
+    }
+};
 
-// int main() {
+int main() {
 
-//     // Create a thread using 
-//     // the functor object
-//     thread t(SumFunctor(3));
+    // Create a thread using 
+    // the functor object
+    thread t(SumFunctor(3));
 
-//     // Wait for the thread to 
-//     // complete
-//     t.join();
-//     return 0;
-// }
+    // Wait for the thread to 
+    // complete
+    t.join();
+    return 0;
+}
 
 
 
